@@ -29,7 +29,7 @@ const Profile = () => {
 
 			const token = Cookies.get("token");
 			const response = await axios.patch(
-				`${import.meta.env.BACKEND_API_BASE_URL}/api/v1/users/update-avatar`,
+				`${import.meta.env.VITE_BACKEND_API_BASE_URL}/api/v1/users/update-avatar`,
 				formData,
 				{
 					headers: {
@@ -62,7 +62,7 @@ const Profile = () => {
 
 			const token = Cookies.get("token");
 			const response = await axios.patch(
-				`${import.meta.env.BACKEND_API_BASE_URL}/api/v1/users/update-resume`,
+				`${import.meta.env.VITE_BACKEND_API_BASE_URL}/api/v1/users/update-resume`,
 				formData,
 				{
 					headers: {

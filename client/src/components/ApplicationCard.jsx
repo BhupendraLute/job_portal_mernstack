@@ -9,7 +9,7 @@ const ApplicationCard = ({ applicantId, applicationId, resume }) => {
 		const fetchApplicantData = async () => {
 			try {
 				const response = await axios.get(
-					`${import.meta.env.BACKEND_API_BASE_URL}/api/v1/users/profile/${applicantId}`,
+					`${import.meta.env.VITE_BACKEND_API_BASE_URL}/api/v1/users/profile/${applicantId}`,
 					{
 						headers: {
 							"Content-Type": "application/json",

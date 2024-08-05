@@ -31,7 +31,9 @@ const NavbarComponent = () => {
 	const handleLogout = async () => {
 		try {
 			const response = await axios.post(
-				`${import.meta.env.BACKEND_API_BASE_URL}/api/v1/users/logout`,
+				`${
+					import.meta.env.VITE_BACKEND_API_BASE_URL
+				}/api/v1/users/logout`,
 				{
 					headers: {
 						"Content-Type": "application/json",

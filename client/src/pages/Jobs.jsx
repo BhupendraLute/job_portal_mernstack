@@ -14,7 +14,7 @@ const JobsPage = () => {
 		e.preventDefault();
 		const token = Cookies.get("token");
 		const response = await axios.get(
-			`${import.meta.env.BACKEND_API_BASE_URL}/api/v1/job-posts/search`,
+			`${import.meta.env.VITE_BACKEND_API_BASE_URL}/api/v1/job-posts/search`,
 			{
 				params: { q: searchValue, page: 1, limit: 10 },
 				headers: {
@@ -33,7 +33,7 @@ const JobsPage = () => {
 		const fetchJobPosts = async () => {
 			const token = Cookies.get("token");
 			const response = await axios.get(
-				`${import.meta.env.BACKEND_API_BASE_URL}/api/v1/job-posts/search`,
+				`${import.meta.env.VITE_BACKEND_API_BASE_URL}/api/v1/job-posts/search`,
 				{
 					params: { q: searchValue, page: 1, limit: 10 },
 					headers: {

@@ -12,7 +12,7 @@ const Greet = () => {
 		const fetchJob = async () => {
 			const token = Cookies.get("token");
 			const response = await axios.get(
-				`${import.meta.env.BACKEND_API_BASE_URL}/api/v1/job-posts/get/${jobId}`,
+				`${import.meta.env.VITE_BACKEND_API_BASE_URL}/api/v1/job-posts/get/${jobId}`,
 				{
 					headers: {
 						"Content-Type": "application/json",
