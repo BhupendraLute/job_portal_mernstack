@@ -12,7 +12,7 @@ const DashboardMain = () => {
 		const fetchJobPosts = async () => {
 			const token = Cookies.get("token");
 			const response = await axios.get(
-				`http://localhost:8000/api/v1/job-posts/get-my-posts`,
+				`${import.meta.env.BACKEND_API_BASE_URL}/api/v1/job-posts/get-my-posts`,
 				{
 					headers: {
 						"Content-Type": "application/json",

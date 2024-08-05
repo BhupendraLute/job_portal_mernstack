@@ -15,7 +15,7 @@ const JobCard = ({ job }) => {
 		if (condition) {
 			const token = Cookies.get("token");
 			const response = await axios.delete(
-				`http://localhost:8000/api/v1/job-posts/delete/${id}`,
+				`${import.meta.env.BACKEND_API_BASE_URL}/api/v1/job-posts/delete/${id}`,
 				{
 					headers: {
 						"Content-Type": "application/json",

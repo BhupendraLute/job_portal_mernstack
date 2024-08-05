@@ -26,7 +26,7 @@ const PostJob = () => {
 		try {
 			const token = Cookies.get("token");
 			const response = await axios.post(
-				"http://localhost:8000/api/v1/job-posts/create",
+				`${import.meta.env.BACKEND_API_BASE_URL}/api/v1/job-posts/create`,
 				formData,
 				{
 					headers: {

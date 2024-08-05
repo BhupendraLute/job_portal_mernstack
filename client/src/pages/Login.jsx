@@ -20,7 +20,7 @@ const Login = () => {
 		e.preventDefault();
 		try {
 			const response = await axios.post(
-				"http://localhost:8000/api/v1/users/login",
+				`${import.meta.env.BACKEND_API_BASE_URL}/api/v1/users/login`,
 				formData,
 				{ withCredentials: true }
 			);

@@ -22,7 +22,7 @@ const Signup = () => {
 		e.preventDefault();
 		try {
 			const response = await axios.post(
-				"http://localhost:8000/api/v1/users/register",
+				`${import.meta.env.BACKEND_API_BASE_URL}/api/v1/users/register`,
 				formData
 			);
 			console.log("response:", response);
